@@ -1,6 +1,6 @@
-# Name-Day
+# Name-Days
 
-Name-Day app is calendar which contain names and events for current day.
+Name-Days app is calendar which contain names and events for current day.
 
 You can find and add name/event to your favorite list with right swipe.
 In the favorite list you'll see your added name/event and countdown, with right swipe you can delete name from favorite list.
