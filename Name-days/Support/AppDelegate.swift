@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let currentDate = Calendar.current.dateComponents([.month,.year,.day], from: Date())
+        
+//        Notification setting
+        let manager = NotificationManager()
+        manager.notificaton = MyNotificaton(id: "Today", title: "Today is \(currentDate.day!) \(K.months[currentDate.month! - 1]) \(currentDate.month!)", datetime: DateComponents(calendar: Calendar.current, hour: 18, minute: 0))
+        manager.schedule()
+        
+        
+        
         return true
     }
 
